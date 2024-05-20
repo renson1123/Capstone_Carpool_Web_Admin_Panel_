@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:capstone_web_admin_panel_carpool/methods/common_methods.dart';
 import 'package:flutter/material.dart';
 
 class DriversPage extends StatefulWidget
@@ -13,27 +14,7 @@ class DriversPage extends StatefulWidget
 
 class _DriversPageState extends State<DriversPage>
 {
-  Widget header(int headerFlexValue, String headerTitle)
-  {
-    return Expanded(
-      flex: headerFlexValue,
-      child: Container(
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.black),
-          color: Colors.green.shade500,
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Text(
-            headerTitle,
-            style: const TextStyle(
-              color: Colors.white,
-            ),
-          ),
-        ),
-      ),
-    );
-  }
+  CommonMethods cMethods = CommonMethods();
 
   @override
   Widget build(BuildContext context) {
@@ -62,17 +43,17 @@ class _DriversPageState extends State<DriversPage>
 
                 Row(
                   children: [
-                    header(1, "Driver ID"),
-                    header(1, "FName"),
-                    header(1, "MName"),
-                    header(1, "LName"),
-                    header(1, "Phone"),
-                    header(1, "Email"),
-                    header(1, "Employee #"),
-                    header(1, "Driver Lic (F)"),
-                    header(1, "Driver Lic (B)"),
-                    header(1, "Med Cert"),
-                    header(1, "Action"),
+                    cMethods.header(1, "Driver ID"),
+                    cMethods.header(1, "FName"),
+                    cMethods.header(1, "MName"),
+                    cMethods.header(1, "LName"),
+                    cMethods.header(1, "Phone"),
+                    cMethods.header(1, "Email"),
+                    cMethods.header(1, "Employee #"),
+                    cMethods.header(1, "Driver Lic (F)"),
+                    cMethods.header(1, "Driver Lic (B)"),
+                    cMethods.header(1, "Med Cert"),
+                    cMethods.header(1, "Action"),
                   ],
                 ),
 
