@@ -25,7 +25,7 @@ class CommonMethods
     );
   }
 
-  Widget data(int dataFlexValue, String dataTitle)
+  Widget data(int dataFlexValue, Widget widget)
   {
     return Expanded(
       flex: dataFlexValue,
@@ -35,12 +35,7 @@ class CommonMethods
         ),
         child: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Text(
-            dataTitle,
-            style: const TextStyle(
-              color: Colors.white,
-            ),
-          ),
+          child: widget,
         ),
       ),
     );
