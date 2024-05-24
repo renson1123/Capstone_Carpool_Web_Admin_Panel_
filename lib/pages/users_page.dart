@@ -1,4 +1,5 @@
 import 'package:capstone_web_admin_panel_carpool/methods/common_methods.dart';
+import 'package:capstone_web_admin_panel_carpool/widgets/users_data_list.dart';
 import 'package:flutter/material.dart';
 
 class UsersPage extends StatefulWidget
@@ -53,7 +54,7 @@ class _UsersPageState extends State<UsersPage>
               ),
 
               // Display Data
-
+              UsersDataList(),
             ],
           ),
         ),
